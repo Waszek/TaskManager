@@ -5,3 +5,4 @@ celery
 redis
 pytest
 pytest-django
+djangorestframework-simplejwt

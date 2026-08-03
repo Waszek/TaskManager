@@ -7,9 +7,7 @@ from .tasks import send_task_creation_notification
 
 class TaskViewSet(viewsets.ModelViewSet):
 
-    def get_queryset(self):
-        return Task.objects.filter(owner=self.request.user)
-   
+    queryset = Task.objects.all()
     serializer_class = TaskSerializer
     permission_classes = [IsAuthenticated]
 
