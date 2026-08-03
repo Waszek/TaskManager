@@ -6,3 +6,4 @@ redis
 pytest
 pytest-django
 djangorestframework-simplejwt
+drf-spectacular
