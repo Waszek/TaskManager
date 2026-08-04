@@ -7,3 +7,4 @@ pytest
 pytest-django
 djangorestframework-simplejwt
 drf-spectacular
+django-filter
