@@ -1,5 +1,11 @@
 from celery import shared_task
+from django.core.mail import send_mail
 
 @shared_task
-def send_task_creation_notification(task_priority, task_title):
-    print(f'Task was created- Priority: {task_priority}, Task name: {task_title}') 
+def send_email_notification_when_task_created(task_title, user_email):
+    send_mail(
+        subject=f"New Task: {task_title}",
+        message=f"Hi, Your task {task_title} was succesfully created.",
+        from_email=None,
+        recipient_list=[user_email]
+    )
